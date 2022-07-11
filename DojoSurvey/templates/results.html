@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+</head>
+<body>
+    <div class="container w-25 mt-3 p-3 bg-dark text-light">
+        <h1 class="text-warning">Dojo Survey</h1>
+        <form class="d-flex flex-column gap-3" action="/">
+            <div>
+                <label for="name" class="form-label">Your Name:</label>
+                <p name="name" id="name">{{results['name']}}</p>
+            </div>
+            <div>
+                <label for="loc" class="form-label">Dojo Location:</label>
+                <p name="loc" id="loc">{{results['loc']}}</p>
+            </div>
+            <div>
+                <label for="favLang" class="form-label">Favorite Language</label>
+                <p name="favLang" id="favLang">{{results['favLang']}}</p>
+            </div>
+            <div>
+                <label for="comment" class="form-label">Comment (optional):</label>
+                <p name="comment" id="comment">{{results['comment']}}</p>
+            </div>
+            <input class="btn btn-danger" type="submit" value="Go Back">
+        </form>
+    </div>
+</body>
+</html>

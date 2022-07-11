@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dojo Survey</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.css')}}">
+</head>
+<body>
+    <div class="container w-25 mt-3 p-3 bg-dark text-light">
+        <h1 class="text-warning">Dojo Survey</h1>
+        <form class="d-flex flex-column gap-3" action="/process" method="POST">
+            <div>
+                <label for="name" class="form-label">Your Name:</label>
+                <input class="form-control" type="text" name="name" id="name">
+            </div>
+            <div>
+                <label for="loc" class="form-label">Dojo Location:</label>
+                <select class="form-control" name="loc" id="loc">
+                    <option value="San Diego">San Diego</option>
+                    <option value="Chattanooga">Chattanooga</option>
+                    <option value="Tempe">Tempe</option>
+                    <option value="Brighton">Brighton</option>
+                </select>
+            </div>
+            <div>
+                <label for="favLang" class="form-label">Favorite Language</label>
+                <select class="form-control" type="text" name="favLang" id="favLang">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                    <option value="OWL2">OWL2</option>
+                    <option value="BF">BF</option>
+                </select>
+            </div>
+            <div>
+                <label for="comment" class="form-label">Comment (optional):</label>
+                <textarea class="form-control" name="comment" id="comment"></textarea>
+            </div>
+            <input class="btn btn-danger" type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
